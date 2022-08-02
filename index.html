@@ -9,10 +9,10 @@
 </head>
 <body>
     <div id="app">
-        <img v-bind:src="picture" alt="">
-        <h1>Hellow {{firstName}}</h1>
+        <img :class="gender" v-bind:src="picture" v-bind:alt="`${firstName} ${lastName}`">
+        <h1>Hello {{firstName}} {{lastName}}</h1>
         <h3>Email: {{email}}</h3>
-        <button>Get Random User</button>
+        <button v-on:click="getUser()" v-bind:class="gender">Get Random User</button>
     </div>
 
     <script src="https://unpkg.com/vue@3"></script>
